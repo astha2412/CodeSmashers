@@ -1,0 +1,81 @@
+
+
+.bgimg
+{
+	background: url("img/bg7.jpg");
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	content: "";
+	height: 100vh;
+
+}
+.headerset
+{
+	padding-top:15%;
+	box-sizing: border-box; 
+}
+.headerset h3
+{
+	font-size: 1.4rem;
+}
+.headerset h1
+{
+	font-size: 4rem;
+	font-weight: bold;
+}
+
+.rowsetting
+{
+	margin: 80px 0px;
+	padding: 10px;
+}
+.imgsetting
+{
+	height: 15vh;
+	color: #fff;	
+	width: 15vh;
+}
+.fa-shopping-cart
+{
+	margin-top: 20px;
+}
+.card
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: none;	
+}
+.myfooter ul
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.myfooter ul li
+{
+	list-style: none;
+	margin-left: 20px;
+	font-size: 2.5rem;
+	padding: 10px;
+}
+.myfooter ul li:nth-child(1) a
+{
+	color:#3B5998;
+}
+.myfooter ul li:nth-child(2) a
+{
+	color:  #f40083;
+}
+.myfooter ul li:nth-child(3) a
+{
+	color:#007bb5;
+}
+
+.myfooter ul li:nth-child(4) a
+{
+	color: black;
+}
+
+.fa:hover {
+    opacity: 0.9;
+}
