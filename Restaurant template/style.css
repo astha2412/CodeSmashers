@@ -1,0 +1,195 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body
+{
+	background:black;
+}
+.head
+{
+	width: 100%;
+	/*border:2px solid red;*/
+	height: 100vh;
+}
+.container1
+{
+	display: flex;
+	height: 15vh;
+	width: 100vw;
+}
+.container1 nav
+{
+	display: flex;
+	width: 40vw;
+}
+.container1 #imgbox img
+{
+	width: 15vw;
+	height: 15vh;
+	/*background-color: red;*/
+}
+.container1 nav ul
+{
+	display: flex;
+	list-style: none;
+	margin:10px;
+}
+.container1 nav ul li
+{
+	display: flex;
+	margin:10px;
+}
+.container1 nav ul li a
+{
+	text-decoration: none;
+	color: white;
+	font-size: 1.2rem;
+	padding: 10px;
+	margin: 10px;
+}
+
+#firsthead::before
+{
+	content: "";
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	background-image: url(img/b3.jpg);
+	z-index: -1;
+	background-size: 100% 100%;
+}
+.container1::before
+{
+	content: "";
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	background:black;
+	z-index: -1;
+	opacity: 0.8;
+	background-size: 100% 100%;
+}
+.main
+{
+	/*border:2px solid green;*/
+	height:80vh;
+	width: 100%; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+section img
+{	
+	width: 100%;
+	height: 30rem;
+	opacity: .5;	
+}
+section .heading
+{
+	margin: 50px;
+	margin-bottom: 5px;
+	font-size: 3rem;
+	color:orange;
+}
+section p 
+{
+	margin: 50px;
+	margin-top: 5px: 
+}
+span
+{
+	color: orange;
+}
+.mybtn
+{
+	padding: 20px;
+	margin: 20px;
+	font-size: 1.1rem;
+	background-color: orange;	
+	border:none;
+	border-radius: 5px;
+}
+
+#third div
+{
+	width: 30%;
+	height: 50vh;
+	position: relative;
+	top:15vh;
+	margin: 50px;
+	color: #fff;	
+	/*border:2px solid yellow;*/
+}
+#third div h3
+{
+	font-size: 2rem;
+	margin: 15px;
+}
+
+
+
+
+#five
+{
+	height: 70vh;
+
+}
+
+#five::before
+{
+	content: "";
+	width: 100%;
+	height: 70vh;
+	position: absolute;
+	background-image: url(img/b3.jpg);
+	z-index: -1;
+	/*background-size: 100% 100%;*/
+}
+#seven
+{
+	width: 100%;
+	height: 60vh;
+}
+#seven img
+{
+	width: 100%;
+	height: 60vh;
+}
+
+#eight #etwo
+{
+	height: 15vh;
+	font-size: 1.2rem;
+	width: 100%;
+}
+
+
+#etwo a 
+{
+	color: #fff;
+}
+
+#ethree
+{
+	height: 10vh;
+	width: 100%;
+}
+#ethree  ul 
+{
+	list-style: none;
+	margin: 10px 50px;
+	display: flex;
+	justify-content: center;
+	
+	/*padding: 20px 20px;*/
+	color: #fff;
+
+}
+#ethree ul li
+{
+	font-size: 40px;
+	margin-right:30px;
+	padding: 10px;
+}
