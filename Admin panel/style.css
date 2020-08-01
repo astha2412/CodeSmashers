@@ -1,0 +1,71 @@
+    #myaccount:hover
+    {
+      color: #fff;
+      /*background: black;*/
+    }
+    a
+    {
+      color: #fff;
+      text-decoration: none;
+    }
+    a:hover
+    {
+      color: black;
+      text-decoration: none;
+    }
+/*body
+{
+	background: grey;
+}*/
+table {border: none;}
+.col1
+{
+	/*border:2px solid red;*/
+	position: relative;
+	top:0;
+	left: 0;
+	bottom: 0;
+	z-index: 2;
+	padding: 10;
+	opacity:.7;
+	background: #D3D3D3;
+}
+.col2
+{
+	/*border:2px solid blue;*/
+}
+.left-sidebar
+{
+	position: sticky;
+	top: 0;	
+	/*background: red;*/
+	height: calc(100vh-70px);
+	width: 100%;
+	/*color: #fff;*/
+}
+.left-sidebar  li a
+{
+	color: black;
+	font-size: 1.1rem;
+	font-weight: bold;
+}
+.left-sidebar  li a:hover
+{
+	color: #fff;
+	font-size: 1.1rem;
+	font-weight: bold;
+}
+
+.left-sidebar #myactive
+{
+	width: 16vw;
+	border-radius: 20px;
+	/*border: 2px solid red;*/
+}
+.left-sidebar #myactive a
+{
+	background: #fff;
+	color: black;
+	width: 100%;
+	border-radius: 20px;
+}

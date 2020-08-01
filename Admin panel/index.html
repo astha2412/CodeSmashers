@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>My DashBoard</title>
+    <!-- charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+
+
+<!-- calender -->
+<link rel="stylesheet" href="dist/tavo-calendar.css">
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <svg width="5em" height="5em" viewBox="0 0 16 16" class="bi bi-sun" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+  <path d="M3.5 8a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0z"/>
+  <path fill-rule="evenodd" d="M8.202.28a.25.25 0 0 0-.404 0l-.91 1.255a.25.25 0 0 1-.334.067L5.232.79a.25.25 0 0 0-.374.155l-.36 1.508a.25.25 0 0 1-.282.19l-1.532-.245a.25.25 0 0 0-.286.286l.244 1.532a.25.25 0 0 1-.189.282l-1.509.36a.25.25 0 0 0-.154.374l.812 1.322a.25.25 0 0 1-.067.333l-1.256.91a.25.25 0 0 0 0 .405l1.256.91a.25.25 0 0 1 .067.334L.79 10.768a.25.25 0 0 0 .154.374l1.51.36a.25.25 0 0 1 .188.282l-.244 1.532a.25.25 0 0 0 .286.286l1.532-.244a.25.25 0 0 1 .282.189l.36 1.508a.25.25 0 0 0 .374.155l1.322-.812a.25.25 0 0 1 .333.067l.91 1.256a.25.25 0 0 0 .405 0l.91-1.256a.25.25 0 0 1 .334-.067l1.322.812a.25.25 0 0 0 .374-.155l.36-1.508a.25.25 0 0 1 .282-.19l1.532.245a.25.25 0 0 0 .286-.286l-.244-1.532a.25.25 0 0 1 .189-.282l1.508-.36a.25.25 0 0 0 .155-.374l-.812-1.322a.25.25 0 0 1 .067-.333l1.256-.91a.25.25 0 0 0 0-.405l-1.256-.91a.25.25 0 0 1-.067-.334l.812-1.322a.25.25 0 0 0-.155-.374l-1.508-.36a.25.25 0 0 1-.19-.282l.245-1.532a.25.25 0 0 0-.286-.286l-1.532.244a.25.25 0 0 1-.282-.189l-.36-1.508a.25.25 0 0 0-.374-.155l-1.322.812a.25.25 0 0 1-.333-.067L8.203.28zM8 2.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11z"/>
+</svg>
+  <a class="navbar-brand" href="#">My DashBoard</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <input class="form-control mr-sm-2 w-80" type="search" placeholder="Search" aria-label="Search">
+        <svg class="mx-2" width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-envelope-fill" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+</svg>
+        <svg class="mx-2" width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bell-fill" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+  <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
+</svg>
+    <ul class="navbar-nav mr-auto mx-2">
+      <li class="nav-item active">
+              <a class="nav-link" href="#" style="font-size: 1.4rem;">LogOut </a>
+          </li>
+    </ul>
+  </div>
+
+  <!-- hidden div -->
+  <div class="container col-2 bg-primary" style="position: absolute;right: 2px;top:12vh;z-index: 2;display: none;" id="mydiv" onmouseleave="display2()">
+    <ul style="font-size:1.1rem;list-style: none">
+      <li><a href="">Arpit Jain</a></li>
+      <li><a href="#">my profile</a></li>
+      <li><a href="#">setting</a></li>
+      <li><a href="#">account</a></li>
+      <li><a href="#">change passord</a></li>
+    </ul>
+  </div>
+  <div>
+    <button class="btn btn-primary" onclick="display()" onmouseover="display()" >
+    <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg" id="myaccount">
+  <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+  <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+  <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+</svg></button>
+  </div>
+</nav>
+
+
+<section class="sectwo">
+  <div class="container-fluid">
+    <div class="row">
+
+      <!-- col 1st which in left nav -->
+      <div class="col-lg-2 col-md-3 col-4 col1">
+        <div class="left-sidebar">
+          <ul class="nav flex-column">
+                  <li class="nav-item " id="myactive">
+                    <a class="nav-link" href="index.html">
+                    <svg class="bi bi-chevron-right" width="20" height="32" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z"/></svg>
+                    Dashboard
+                  </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                    <svg class="bi bi-chevron-right" width="20" height="32" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z"/></svg>
+                  Task</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                      <svg class="bi bi-chevron-right" width="20" height="32" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z"/></svg>
+                    My Project</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                      <svg class="bi bi-chevron-right" width="20" height="32" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z"/></svg>
+                    My Wallet</a>
+                  </li>
+                                    <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                      <svg class="bi bi-chevron-right" width="20" height="32" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z"/></svg>
+                    History Data</a>
+                  </li>
+                                    <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                      <svg class="bi bi-chevron-right" width="20" height="32" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z"/></svg>
+                    Invoice</a>
+                  </li>
+                                    <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                      <svg class="bi bi-chevron-right" width="20" height="32" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z"/></svg>
+                    helps</a>
+                  </li>
+                </ul>
+        </div>
+      </div>
+      <!-- end  of left nav -->
+
+      <!-- 2nd col which has main dash board -->
+      <div class="col-lg-10 col-md-9 col-8 col2 pl-5">
+              <!-- charts -->
+
+              <!-- 1st row -->
+            <div class="row mt-5">
+                <!-- 1st col -->
+                <div class="col-lg-7 col-11 mr-auto mb-5 text-white" style="background:#989898;">
+                     <h3>Statistics</h3>
+                     <div id="curve_chart" style="height:50vh; width: 45vw;">
+                     </div>
+                </div>
+                <!-- end of 1s col -->
+
+                <!-- 2nd col -->
+                <div class="col-lg-4 col-10 p-2 mr-auto mb-5 text-white" style="height: 75vh;background:#989898;" > 
+                  <h3>Earning In Month</h3>
+                    <div class="myicon text-center">
+                      <h1>75%</h1>
+                    </div>
+                    <canvas id="myChart1"></canvas>
+                    <hr>
+                      <div>
+                        <table class="table text-white text-center">
+                           <tbody>
+                              <tr>
+                                <td>Deposit:</td>
+                                
+                                <td>$20 541875 574</td>
+                              </tr>
+                              <tr>
+                                <td>Expense:</td>
+                                
+                                <td>$54 1 875 574</td>
+                              </tr>
+                              <tr>
+                                <td>payable</td>
+                                <td>$805 875 574</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                      </div>
+                </div>
+                <!-- end of 2nd col -->
+              </div> 
+              <!-- end  of 1st row -->
+
+              <hr>
+
+              <!-- 2nd row -->
+              <div class="row my-2">
+               <!--  1st col of 2nd row -->
+                <div class="col-lg-3 mx-2" style="background:#989898;">
+                  <h3>monthly sale</h3>
+                  <div class="text-center">
+                  <canvas id="myChart2" height="20vh" width="20vh"></canvas>
+                  <h5 style="text-align: right;">65%</h5>
+                  <div class="container-fluid">
+                      <input type="range" min="1" max="100" value="65">
+                    </div>
+                    <h3><b>20 541</b></h3>
+                    <h6>Today income</h6>
+                  </div>
+                </div>
+                 <!-- end of 1st col of 2nd row -->
+
+                  <!-- 2ndst col of 2nd row -->
+                <div class="col-lg-3 mx-2" style="background:#989898;">
+                  <h3>Yearly sale</h3>
+                  <div class="text-center">
+                  <canvas id="myChart3" height="20vh" width="20vh"></canvas>
+                  <h5 style="text-align: right;">75%</h5>
+                 <div class="container-fluid">
+                      <input type="range" min="1" max="100" value="75">
+                    </div>
+                    <h3><b>20 54 125</b></h3>
+                    <h6>Total income</h6>
+                 </div>
+                </div>
+                 <!-- end of 2nd col of 2nd row -->
+
+                <!-- 3rd col of 2nd row -->
+                <div class="col-lg-5 mx-2" style="background:#C8C8C8;">
+                  <h2>calender</h2>
+                    <div id="my-calendar" class="mt-5">
+                    </div>
+                </div>
+                <!-- end of  3rd col of 2nd row -->
+              </div>
+              <!-- end of 2nd rw -->
+          
+            </div>
+          </div>  
+          <!-- end of 2nd  col  of main row-->
+    </div>
+    <!-- end of main row -->
+  </div>
+  <!-- end of contaienrfluid -->
+</section>
+
+
+
+
+
+
+    <script src="my.js"></script>
+    <script src="dist/tavo-calendar.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" ></script>
+  <script>
+//    const myCalendar = new TavoCalendar('#my-calendar', {
+//       // settings here
+// })
+    var today = new Date();
+    var dd = String(today.getDate());
+var mm = String(today.getMonth() + 1) //January is 0!
+var yyyy = String(today.getFullYear());
+  let date1=dd+"-"+mm+"-"+yyyy;
+    console.log(today,dd,mm,yyyy,date1);
+
+    const myCalendar = new TavoCalendar('#my-calendar', {
+      date: date1,
+      format: "DD-MM-YYYY"
+})
+
+
+  </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>
