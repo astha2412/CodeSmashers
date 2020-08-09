@@ -62,16 +62,6 @@ section .mybtn1:hover
 {
 	color: #fff;
 }
-.sectwo::before
-{
-	content: "";
-	width: 100%;
-	height: 40vh;
-	background:url("b3.jpg");	
-	/*background-color: black;*/
-	position: absolute;
-	z-index: -1;
-}
 .secthree
 {
 	/*background-color:#474c16;*/
@@ -200,14 +190,13 @@ height: 30vh;
 .myfooter ul
 {
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	padding: 0;
 }
 .myfooter ul li
 {
 	list-style: none;
 	margin-left: 20px;
-	font-size: 2.3rem;
+	font-size: 2rem;
 	padding: 10px;
 }
 .myfooter ul li a i
@@ -227,4 +216,24 @@ height: 30vh;
 .sec13 li
 {
 	list-style: none;
+}
+
+@media screen and (max-width: 452px) {
+  body {
+    background-color: blue;
+  }
+  .myfooter ul li
+{
+	list-style: none;
+	margin-left: 10px;
+	font-size: 1rem;
+	padding: 5px;
+}
+.myfooter ul li a i
+{
+	color:black;
+	border-radius: 50%;
+	 padding: 5px;
+	 background-color: #fff;
+}
 }
