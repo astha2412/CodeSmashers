@@ -95,11 +95,11 @@
        
          
 
-      let links = ["..//yoga template/index.html","..//Simple portfolio template/index.html","..//Food Ordering/index.html","..//Food template/index.html", "..//Imaginative template/index.html" ,"..//Restaurant template/index.html","..//we design and develop/index.html","..//FB social media website/index.html"];
+      let links = ["yoga template/index.html","..//Simple portfolio template/index.html","..//Food Ordering/index.html","..//Food template/index.html", "..//Imaginative template/index.html" ,"..//Restaurant template/index.html","..//we design and develop/index.html","..//FB social media website/index.html"];
 
       let path = ["img/sample1.png","img/sample2.png","img/sample3.png","img/sample4.png", "img/sample5.png" , "img/sample6.png","img/sample8.png","img/sample7.png" ];
 
-      let names = ["Yoga template","Simple Portfolio template","Food Ordering","Classic Restraunt", "Imaginative" , "Pizza corner","We Design and Develop","Fb social media website" ];
+      let names = ['Yoga template',"Simple Portfolio template","Food Ordering","Classic Restraunt", "Imaginative" , "Pizza corner","We Design and Develop","Fb social media website" ];
       let desc = [
                         "Its is the first template that i made when i don't know about bootstrap so  i use only html and css but later i added some more code to make it responsive but it needs more modifications which i will do soon.",
 
@@ -121,9 +121,10 @@
 
       for(let i=0;i<8;i++)
       {
+        console.log(links[i] , typeof(links[i]))
       mycards.innerHTML += ` <div class="col-lg-4 col-md-4 col-12">
           <div class="card">
-            <a href=${links[i]}>
+            <a href ="`+links[i]+`">
             <img src=${path[i]} class="card-img-top img-fluid" alt="...">
             <div class="card-body">
               <h5 class="card-title">${names[i]}</h5>
