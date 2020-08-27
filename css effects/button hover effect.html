@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a
+        {
+            text-transform: uppercase;
+            padding:8px 30px;
+            position: relative;
+            color:#000;
+            text-decoration: none;
+            font-size:40px;
+            border:2px solid #000;
+            box-sizing: border-box;
+            transition: 2s;
+        }
+        
+         a:before
+        {
+            content:'';
+            position: absolute;
+            top:0;
+            left:0;
+            width:50%;
+            height: 100%;
+            background: #000;
+            z-index: -1;
+            transform: scaleX(0);
+            transition: transform 2s;
+            transform-origin: left;
+
+        }
+
+        a:hover:before{
+            transform: scaleX(1);
+            transition: transform 2s;
+            transform-origin: right;
+        }
+        a:after
+        {
+            content:' ';
+            position: absolute;
+            top:0;
+            right:0;
+            width:50%;
+            height: 100%;
+            background: #000;
+            z-index: -1;
+            transform: scaleX(0);
+            transition: transform 2s;
+            transform-origin:right;
+
+        }
+
+        a:hover:after{
+            transform: scaleX(1);
+            transition: transform 2s;
+            transform-origin: left;
+        }
+        a:hover{
+            color:white;
+        } 
+
+    </style>
+</head>
+<body>
+    <a href="#">
+        button
+    </a>
+</body>
+</html>
