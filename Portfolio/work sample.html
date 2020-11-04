@@ -133,7 +133,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
-    <script>
+ <script>
       var mycards = document.getElementById('mycards');
        
          
@@ -142,6 +142,8 @@
 
       let path = ["img/sample1.png","img/sample2.png","img/sample3.png","img/sample4.png", "img/sample5.png" , "img/sample6.png","img/sample8.png","img/sample7.png" ];
 
+    let s = "https://github.com/arpit456jain/CodeSmashers/tree/master/"
+      let source = ["yoga template","Simple portfolio template","Food Ordering","Food template", "Imaginative template" , "Restaurant template","we design and develop","Fb social media website"]
       let names = ['Yoga template',"Simple Portfolio template","Food Ordering","Classic Restraunt", "Imaginative" , "Pizza corner","We Design and Develop","Fb social media website" ];
       let desc = [
                         "Its is the first template that i made when i don't know about bootstrap so  i use only html and css but later i added some more code to make it responsive but it needs more modifications which i will do soon.",
@@ -153,11 +155,11 @@
 
                         " I had made this template as a task under the <b>front-end developer intership at Start Up Inc</b> from 9th July 2020 to 9 Aug 2020.It is fully reponsive as i used bootstrap and medeia queries"
                         ,
-                        " This one is made <b> completely in html and css only</b>. I did't use bootstrap in this all i used 3 css files for 3 different screens <b>Desktop, i-pad, mobile</b>  and its actually looks very nice.Its is one the  <b> best work  </b>i had done",
+                        " This one is made <b> completely in html and css only</b>. I did't use bootstrap in this all i used 3 css files for 3 different screens <b>Desktop, i-pad, mobile</b>  and its actually looks very nice.",
                         "This template is also created as a task under an intership and it is fully responsive good-looking template i only used html,css,bootstrap,and some media queries",
                         "This template is also created as a task under an intership and it is fully responsive good-looking template i only used html,css,bootstrap,and some media queries",
 
-                        "Now this is the best work i had done ever in the field of Web D i tried to Replicate the Fb Social Media Platform and the 3-4 pages of starting are 80-90% similar to actual page and its also dynamic as i use JavaScript in it.I am working on it it will be a great project"
+                        "I tried to Replicate the Front-End of Fb Social Media Platform and the 3-4 pages of starting are 80-90% similar to actual page and its also dynamic."
 
                   ];
       
@@ -166,15 +168,17 @@
       {
         console.log(links[i] , typeof(links[i]))
       mycards.innerHTML += ` <div class="col-lg-4 col-md-4 col-12">
-          <div class="card">
+          <div class="card" style = "overflow:hidden;">
             <a href ="`+links[i]+`">
             <img src=${path[i]} class="card-img-top img-fluid" alt="...">
             <div class="card-body">
               <h5 class="card-title">${names[i]}</h5>
               </a>
               <p class="card-text">${desc[i]}</p>
+              <a href="${s}`+`${source[i]}" class="btn btn-primary text-white" target = "_blank">source code</a>
             </div>
           </div>
+         
         </div>`;
       }
     </script>
