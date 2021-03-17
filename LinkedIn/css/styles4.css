@@ -1,0 +1,125 @@
+body, html{
+    overflow-x: hidden;
+    height:100%;
+    width:100%;
+    padding: 0;
+    margin:0;
+    
+  }
+  
+  body{
+    background-color: #fff;
+  }
+
+  .highlight{
+    padding: 0 2px;
+    margin-left: 2px;
+    border: 1px solid #0073b1;
+    border-radius: 2px;
+    background-color: #0073b1;
+    color: #fff;
+  }
+
+  .forms{
+      padding-left: 83%;
+  }
+
+  .link{
+      color: #fff;
+      text-decoration: none;
+  }
+  
+  .link:hover{
+      color: darkgray;
+      text-decoration: none;
+  }
+
+  .main{
+      padding: 7% 20% 10%;
+  }
+
+  p{
+      font-size: 1.2rem;
+      line-height: 3;
+  }
+
+  label{
+      font-size: .9rem;
+  }
+
+  input[type=text]{
+      width: 400px !important;
+      border: 1px solid rgba(0,0,0,0.6);
+      border-radius: 3px;
+      padding: 10px;
+  }
+
+  input[type=text]:focus{
+      border: 2px solid #0073b1;
+  }
+
+  .btn-outline-primary{
+      margin-top: 5%;
+      color: #0073b1 !important;
+      border: 1px solid #0073b1 !important;
+      border-radius: 2px !important;
+      width: 20%;
+  }
+
+  .btn-outline-primary:hover{
+      border: 1px solid #004b7c;
+      color: #004b7c !important;
+      background-color: rgba(152,216,244,0.45) !important;
+  }
+
+  .btn-primary{
+    margin-top: 5%;
+    color: #fff;
+    border: #0073b1 !important;
+    border-radius: 2px !important;
+    background-color: #0073b1 !important;
+    width: 20%;
+  }
+
+  .btn-primary:hover{
+    border: #004b7c !important;
+    background-color: #004b7c !important;
+  }
+
+  .footer{
+    text-align: center;
+    background-color: #fff;
+    padding: 2% 5%;
+  }
+  
+  .footer a{
+    
+    color: darkgray;
+    font-size: small;
+    padding: 10px;
+  }
+  
+  .footer a:hover{
+    color: #0073b1;
+    text-decoration: none;
+  }
+
+
+  @media (max-width:1000px){
+    .main{
+        padding: 5%;
+        padding-bottom: 25%;
+    }
+
+    .forms{
+        padding-left: 5%;
+    }
+
+    .btn-outline-primary:hover{
+        width: auto !important;
+    }
+
+    .btn-primary{
+        width: auto !important;
+    }
+  }
