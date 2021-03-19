@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<title>form validation</title>
+
+<style>
+	body
+	{
+		margin: 0;
+		padding: 0;
+	}
+	h3::selection
+	{
+		color:red;
+		background: lightgreen;
+	}
+header
+{
+	/* border:2px solid red; */
+	width: 100%;
+	/* background-color: lightgreen; */
+	text-shadow:4px 4px 4px chartreuse;
+	background:radial-gradient(white 5%, rgb(39, 211, 39));
+	height: 8vh;
+	text-align: center;
+}
+.container
+{	width: 100%;
+	height: 100vh;
+	background: rgb(189, 253, 189);
+	padding:0;
+	/* margin:0 auto; */
+	/* border:2px solid blue; */
+}
+.main
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background:#fff;
+	/* border:2px solid yellow; */
+	width:50%;
+	height: 60vh;
+	margin:40px auto;
+
+}
+h3
+{
+	display: inline;
+}
+input[type=text],input[type=password]
+{	border-radius: 20px;
+	box-shadow:2px 2px 2px green;
+	width:50%;
+	height: 20px;
+	margin: 4px;
+	padding: 4px;
+}
+button
+{
+	margin: 0 170px;
+	height: 50px;
+	width: 100px;
+	font-size: 20px;
+	border-radius: 30px;
+	box-shadow: 8px 6px 4px black;
+}
+button:hover,input:hover
+{
+	color:red;
+	background-color: yellow;
+}
+span,p
+{
+	font-size: 20px;
+}
+h1
+{
+	padding: 0;
+	margin: 0;
+}
+</style>
+</head>
+
+<body>
+	<div class="container">
+		<header>
+			<h1>FORM VALIDATION</h1>
+		</header>
+			<div class="main">
+
+				<form>
+					<h3>username</h3>
+					<input required type="text" name="username" id="input3" ><br>
+					<h3>password</h3>
+					<input required type="password" id="input4"  oninput="validation2()">
+			<input type="checkbox" id="box" onclick="box1()">
+			<span id="notice">show password</span>
+			<p id="cp">capital</p>
+			<p id="sm">small</p>
+			<p id="nm">number</p>
+			<br>
+			<button onclick="validation()">send us</button>
+			</form>
+		</div>
+	</div>
+	<script>
+function validation()
+{
+			var x=document.getElementById("input3").value;
+			var y=document.getElementById("input4").value;
+			if((x=="arpit")||(x=="Arpit"))
+			{
+				if(y=="arpit456jain")
+				{
+					window.alert("accepted");
+				}
+			}
+			else
+					window.alert("username or password is incorrect");
+}
+function validation2()
+{
+	var x=document.getElementById("input4").value;
+	var cap=document.getElementById("cp");
+	var small=document.getElementById("sm");
+	var num=document.getElementById("nm");
+	
+	if(x.match(/[A-Z]/))
+	{
+		cap.style.display="none";
+	}
+	else 
+	{
+		cap.style.display="block";
+	}
+	if(x.match(/[0-9]/))
+	{
+		num.style.display="none";
+	}
+	else 
+	{
+		num.style.display="block";
+	}
+	if(x.match(/[a-z]/))
+	{
+		small.style.display="none";
+	}
+	else 
+	{
+		small.style.display="block";
+	}
+}
+
+
+function box1()
+{
+	var notice=document.getElementById("notice");
+	var password=document.getElementById("input4");
+	var x=document.getElementById("box").checked;
+	if(x==true)
+	{
+		password.type="text";
+		notice.innerHTML="hide password";
+	}
+	else
+	{
+		password.type="password";
+		notice.innerHTML="show password";
+	}
+}
+</script>
+</body>
+</html>
+

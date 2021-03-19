@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Dragon Travel Desk</title>
+</head>
+
+<body>
+    <div class="alert alert-success alert-dismissible fade " role="alert" id="success1">
+        <!-- <div class="alert alert-danger alert-dismissible fade show" role="alert"> -->
+        <strong>Sucess!!</strong> You form is sucessfully submit.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="alert alert-danger alert-dismissible fade " role="alert" id="failure">
+        <!-- <div class="alert alert-danger alert-dismissible fade show" role="alert"> -->
+        <strong>ERROR!!!</strong> Some thing is wrong.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="container">
+        <h1> Welcome!! To Dragon Travel Desk</h1>
+        <form>
+            <div class="form-group">
+                <label for="name">USERNAME</label>
+                <input type="text" class="form-control " id="name" placeholder="enter your name here">
+                <!-- <div class="invalid-feedback" >this is wrong</div> -->
+                <small id="namevalid" class="form-text text-mutd invalid-feedback"> username can not start with a number and it should greater the 3 letters and 3-10 long!!!!</small>
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="text" class="form-control" id="email" placeholder="enter your email as name@example.com">
+                <small id="emailvalid" class="form-text text-mutd invalid-feedback"> this email is not valid </small>
+            </div>
+
+            <div class="form-group">
+                <label for="car">select your car</label>
+                <select class="form-control" id="car">
+                    <option>marutee</option>
+                    <option>nano</option>
+                    <option>racing car</option>
+                    <option>volkswagen</option>
+                    <option>saffari</option>
+                    <option>Audi</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="number">number</label>
+                <input type="number" class="form-control" id="number" placeholder="enter your number">
+                <small id="numbervalid" class="form-text text-mutd invalid-feedback"> number should be 10 digit long!!!!</small>
+            </div>
+            <div class="form-group">
+                <label for="address">ADDRESS!!</label>
+                <textarea class="form-control" id="address" rows="2"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="query">Any other message or query!!</label>
+                <textarea class="form-control" id="query" rows="1"></textarea>
+            </div>
+            <button class="btn btn-primary" id="submit">Submit</button>
+        </form>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script>
+        console.log('this is my form validatio file');
+let validemail= false
+let validnumber= false
+let validname= false
+
+const name = document.getElementById('name');
+ const email = document.getElementById('email');
+ const number = document.getElementById('number');
+ const address = document.getElementById('address');
+
+//  to check whether our element is grabbed or not
+//  console.log(name,email,number,address);
+
+name.addEventListener('blur',nameblur);
+number.addEventListener('blur',numberblur);
+email.addEventListener('blur',emailblur);
+
+
+function nameblur()
+{
+    // when cursor is out from region it will blurred
+    console.log('name is blurred');
+    let regex = /^[a-zA-Z]([0-9a-zA-Z\ ]){3,20}$/ ; // it means name can contain a-z A-Z and 0-9 and it length will be 0-10 and it can start with a-z A-Z 
+    // let regex = /[a-z]/
+    let str = name.value;
+    console.log(str,regex)
+    if(regex.test(str))
+    {
+        console.log('mathched');
+        name.classList.add('is-valid');// class is dynamically added
+        name.classList.remove('is-invalid');// class is dynamically added
+        validname = true;
+    }
+    else
+    {
+        console.log(' not mathched');
+        name.classList.add('is-invalid');
+        validname = false;
+    }
+}
+function numberblur()
+{
+    console.log('number is blurred');
+    let regex = /[0-9]{10}$/ ;
+    let str = number.value;
+    console.log(str,regex)
+    if(regex.test(str))
+    {
+        console.log('mathched');
+        number.classList.add('is-valid');// class is dynamically added
+        number.classList.remove('is-invalid');// class is dynamically added
+        validnumber = true;
+    }
+    else
+    {
+        console.log(' not mathched');
+        number.classList.add('is-invalid');
+        validnumber =  false;
+    }
+}
+function emailblur()
+{
+    console.log('email is blurred');
+    let regex = /^([a-zA-z0-9_\-\.]+)@([a-zA-z0-9_\-\.]+)\.([a-zA-Z]){2,20}$/ ;
+    let str = email.value;
+    console.log(str,regex)
+    if(regex.test(str))
+    {
+        console.log('mathched');
+        email.classList.add('is-valid');// class is dynamically added
+        email.classList.remove('is-invalid');// class is dynamically added
+        validemail = true;
+    }
+    else
+    {
+        console.log(' not mathched');
+        email.classList.add('is-invalid');
+        validemail=false;
+    }
+}
+
+let submit = document.getElementById('submit');
+submit.addEventListener('click',clicked)
+function clicked(e)
+{
+    let success=document.getElementById('success1');
+    let failure = document.getElementById('failure');
+    e.preventDefault();
+    console.log('you clicked on submit',validnumber,validname,validemail)
+    if(validemail && validnumber && validname )
+    {
+    console.log('you have submited succesfully')
+    success.classList.add('show');
+    failure.classList.remove('show');
+}
+    else
+    {
+        console.log("something  is inncorrect")
+       failure.classList.add('show');
+        success.classList.remove('show');
+
+    }
+}
+    </script>
+</body>
+
+</html>
