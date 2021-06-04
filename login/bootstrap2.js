@@ -1,6 +1,6 @@
 
 var username = "Pgexi"
-var passWord = "RpeIjgtIwtUapv"
+var passWord = "RpEiJgTiWtUapv"
 
 var username = document.getElementById("username");
 var password = document.getElementById("password");
